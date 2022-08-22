@@ -14,12 +14,15 @@
     <body>
         <!--Header-->
         <header class="header-container">
+
             <figure class="image-container">
                 <a href="index.html">
                     <img id="logo-image" src="images/Svg/logo.svg" alt="No encontrado">
                 </a>
             </figure>
+
             <nav class="navigator">
+                
                 <ul class="menu">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="pages/planets.html">Planetas</a></li>
@@ -28,7 +31,13 @@
                     <li><a href="pages/contact.html">Contacto</a></li>
                     <div class="slideEffect"></div>
                 </ul>
+
+                <div id="nav_logo">
+                    <img src="images/Svg/hamburguer-menu.svg" alt="No encontrado">
+                </div>
+
             </nav>
+
         </header>
         <!--Section - Humanos en el espacio-->
         <section class="space-humans-container">
@@ -41,14 +50,20 @@
                     laboriosam cupiditate.
                     </p>
                 </div>
+
+                <figure class="astronaut-container">
+                    <img src="images/Svg/Astronaut.svg" alt="No encontrado">
+                </figure>
+
                 <div class="buttons-container">
-                    <a id="missions-btn" href="#misiones">Misiones</a>
-                    <a id="events-btn" href="#eventos"> Próximos eventos</a>
+                    <button class="button missions">
+                        <a id="missions-btn" href="#misiones">Misiones</a>
+                    </button>
+                    <button class="button events">
+                        <a id="events-btn" href="#eventos">Próximos eventos</a>
+                    </button>
                 </div>
             </div>
-            <figure class="astronaut-container">
-                <img src="images/Svg/Astronaut.svg" alt="No encontrado">
-            </figure>
         </section>
         <!--Section - Nuestras misiones (Contenido principal)-->
         <main class="missions-container">
