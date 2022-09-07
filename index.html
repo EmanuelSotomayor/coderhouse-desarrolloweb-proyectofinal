@@ -17,23 +17,28 @@
 
             <figure class="image-container">
                 <a href="index.html">
-                    <img id="logo-image" src="images/Svg/logo.svg" alt="No encontrado">
+                    <img id="logo-image" src="/images/Svg/logo.svg" alt="No encontrado">
                 </a>
             </figure>
 
             <nav class="navigator">
-                
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/planets.html">Planetas</a></li>
-                    <li><a href="pages/galaxies.html">Galaxias</a></li>
-                    <li><a href="pages/stars.html">Estrellas</a></li>
-                    <li><a href="pages/contact.html">Contacto</a></li>
-                    <div class="slideEffect"></div>
-                </ul>
+                <div
+                    <ul id="menuContainer">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/planets.html">Planetas</a></li>
+                        <li><a href="pages/galaxies.html">Galaxias</a></li>
+                        <li><a href="pages/stars.html">Estrellas</a></li>
+                        <li><a href="pages/contact.html">Contacto</a></li>
+                        <div class="slideEffect"></div>
+                    </ul>
+                </div> 
 
-                <div id="nav_logo">
+                <div id="open_menu">
                     <img src="images/Svg/hamburguer-menu.svg" alt="No encontrado">
+                </div>
+
+                <div id="close_menu">
+                    <img src="images/Svg/close-menu.svg" alt="No encontrado">
                 </div>
 
             </nav>
@@ -70,140 +75,256 @@
                 <h2 class="title">Nuestras misiones</h2>
                 <div class="title-slider">
                     <ul class="slider-navigator">
-                        <li>Mars rover</li>
-                        <li>Hubble</li>
-                        <li>Artemis I</li>
-                        <li>Dart</li>
-                        <li>Juno</li>
-                        <li>James webb</li>
+                        <li id="first__nav--link" class="nav__slider--link">Mars rover</li>
+                        <li class="nav__slider--link">Hubble</li>
+                        <li class="nav__slider--link">Artemis I</li>
+                        <li class="nav__slider--link">Dart</li>
+                        <li class="nav__slider--link">Juno</li>
+                        <li class="nav__slider--link">James webb</li>
                     </ul>
                 </div>
+            <div class="galeries-slider">
             <!--Mars rover gallery-->
-            <div class="gallery">
+            <div id="mars" class="gallery">
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-1.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Construcción del mars rover</h2>
+                        <p>Muestra del tamaño real del mars rover.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-2.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Exploración del piso marciano</h2>
+                        <p>Toma de muestras de sedimentos y rocas.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-3.png" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Observación de la atmosfera y horizonte</h2>
+                        <p>Día marciano, escena panorámica capturada 8:30 a.m. y 4:10 p.m.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-4.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Formaciones rocosas uniformes</h2>
+                        <p>Se puede observar un patrón tipico de un depósito sedimentario,
+                        donde antes se encontraba un lago.
+                        </p>
+                    </div>
                 </article>
             </div>
             <!--Hubble gallery-->
-            <div class="gallery">
+            <div id="hubble" class="gallery">
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-1.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Construcción del mars rover</h2>
+                        <p>Muestra del tamaño real del mars rover.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-2.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Exploración del piso marciano</h2>
+                        <p>Toma de muestras de sedimentos y rocas.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-3.png" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Observación de la atmosfera y horizonte</h2>
+                        <p>Día marciano, escena panorámica capturada 8:30 a.m. y 4:10 p.m.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-4.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Formaciones rocosas uniformes</h2>
+                        <p>Se puede observar un patrón tipico de un depósito sedimentario,
+                        donde antes se encontraba un lago.
+                        </p>
+                    </div>
                 </article>
             </div>
             <!--Artemis I gallery-->
-            <div class="gallery">
+            <div id="artemis" class="gallery">
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-1.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Construcción del mars rover</h2>
+                        <p>Muestra del tamaño real del mars rover.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-2.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Exploración del piso marciano</h2>
+                        <p>Toma de muestras de sedimentos y rocas.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-3.png" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Observación de la atmosfera y horizonte</h2>
+                        <p>Día marciano, escena panorámica capturada 8:30 a.m. y 4:10 p.m.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-4.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Formaciones rocosas uniformes</h2>
+                        <p>Se puede observar un patrón tipico de un depósito sedimentario,
+                        donde antes se encontraba un lago.
+                        </p>
+                    </div>
                 </article>
             </div>
             <!--Dart gallery-->
-            <div class="gallery">
+            <div id="dart" class="gallery">
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-1.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Construcción del mars rover</h2>
+                        <p>Muestra del tamaño real del mars rover.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-2.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Exploración del piso marciano</h2>
+                        <p>Toma de muestras de sedimentos y rocas.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-3.png" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Observación de la atmosfera y horizonte</h2>
+                        <p>Día marciano, escena panorámica capturada 8:30 a.m. y 4:10 p.m.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-4.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Formaciones rocosas uniformes</h2>
+                        <p>Se puede observar un patrón tipico de un depósito sedimentario,
+                        donde antes se encontraba un lago.
+                        </p>
+                    </div>
                 </article>
             </div>
             <!--Juno gallery-->
-            <div class="gallery">
+            <div id="juno" class="gallery">
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-1.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Construcción del mars rover</h2>
+                        <p>Muestra del tamaño real del mars rover.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-2.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Exploración del piso marciano</h2>
+                        <p>Toma de muestras de sedimentos y rocas.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-3.png" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Observación de la atmosfera y horizonte</h2>
+                        <p>Día marciano, escena panorámica capturada 8:30 a.m. y 4:10 p.m.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-4.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Formaciones rocosas uniformes</h2>
+                        <p>Se puede observar un patrón tipico de un depósito sedimentario,
+                        donde antes se encontraba un lago.
+                        </p>
+                    </div>
                 </article>
             </div>
             <!--James webb gallery-->
-            <div class="gallery">
+            <div id="james" class="gallery">
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-1.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Construcción del mars rover</h2>
+                        <p>Muestra del tamaño real del mars rover.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-2.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Exploración del piso marciano</h2>
+                        <p>Toma de muestras de sedimentos y rocas.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-3.png" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Observación de la atmosfera y horizonte</h2>
+                        <p>Día marciano, escena panorámica capturada 8:30 a.m. y 4:10 p.m.</p>
+                    </div>
                 </article>
                 <article class="gallery-item">
                     <img src="images/Slider-missions/mars-rover-4.jpg" alt="No encontrado">
+                    <div class="card-body">
+                        <h2>Formaciones rocosas uniformes</h2>
+                        <p>Se puede observar un patrón tipico de un depósito sedimentario,
+                        donde antes se encontraba un lago.
+                        </p>
+                    </div>
                 </article>
-            </div>
+            </div>          
+        </div>
         </main>
         <!--Section - Próximos eventos-->
         <section class="events-container">
             <h2 class="title">Próximos eventos</h2>
             <div class="cards">
                 <article class="cards-item">
-                    <div class="date-card">
-                        <strong>08</strong>
-                        <p>Agosto</p>
-                    </div>
-                    <div class="event-info">
-                        <p>Expedición 67° de la estación espacial internacional</p>
-                        <p>12PM - 5PM</p>
-                        <p>@NasaTV (2022)</p>
-                    </div>
-                </article>
-                <article class="cards-item">
-                    <div class="date-card">
-                        <strong>08</strong>
-                        <p>Agosto</p>
-                    </div>
-                    <div class="event-info">
-                        <p>Expedición 67° de la estación espacial internacional</p>
-                        <p>12PM - 5PM</p>
-                        <p>@NasaTV (2022)</p>
+                    <div class="events-cards-body">
+                        <div class="date-card">
+                            <strong>08</strong>
+                            <p>Agosto</p>
+                        </div>
+                        <div class="event-info">
+                            <p>Expedición 67° de la estación espacial internacional</p>
+                            <p>12PM - 5PM</p>
+                            <p>@NasaTV (2022)</p>
+                        </div>
                     </div>
                 </article>
                 <article class="cards-item">
-                    <div class="date-card">
-                        <strong>08</strong>
-                        <p>Agosto</p>
+                    <div class="events-cards-body">
+                        <div class="date-card">
+                            <strong>08</strong>
+                            <p>Agosto</p>
+                        </div>
+                        <div class="event-info">
+                            <p>Expedición 67° de la estación espacial internacional</p>
+                            <p>12PM - 5PM</p>
+                            <p>@NasaTV (2022)</p>
+                        </div>
                     </div>
-                    <div class="event-info">
-                        <p>Expedición 67° de la estación espacial internacional</p>
-                        <p>12PM - 5PM</p>
-                        <p>@NasaTV (2022)</p>
+                </article>
+                <article class="cards-item">
+                    <div class="events-cards-body">
+                        <div class="date-card">
+                            <strong>08</strong>
+                            <p>Agosto</p>
+                        </div>
+                        <div class="event-info">
+                            <p>Expedición 67° de la estación espacial internacional</p>
+                            <p>12PM - 5PM</p>
+                            <p>@NasaTV (2022)</p>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -247,5 +368,6 @@
                 </div>
             </div>
         </footer>
+        <script src="/scripts/app.js"></script>
     </body>
 </html>
