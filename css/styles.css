@@ -8,13 +8,6 @@
     --background-footer: url('../images/Svg/pattern-hills.svg');
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-
 body{
     background-image: var(--background-image);
     background-repeat: no-repeat;
@@ -24,246 +17,7 @@ body{
     scroll-behavior: smooth;
 }
 
-.header-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.3em;
-}
 
-.image-container{
-    display: flex;
-    align-items: center;
-    width: 60%;
-}
-
-.image-container a img{
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-}
-
-.image-container a{
-    width: 100%;
-}
-
-.navigator{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navigator #menuContainer li{
-    list-style: none;
-}
-
-#menuContainer{
-    position: absolute;
-    top: 0;
-    left: 100%;
-    transition: 1s all;
-    height: 100vh;
-}
-
-.showMenu{
-    width: 100%;
-    height: 100vh;
-    background-color: #A22B91;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom-right-radius: 100px;
-}
-
-.showMenu li{
-    width: 100%;
-    position: relative;
-    bottom: 10%;
-    padding: 2rem;
-    transition: 1s all ease-out;
-}
-
-.showMenu li:hover{
-    background-color: #79206b;
-}
-
-#open_menu img{
-    width: 30px;
-    cursor: pointer;
-}
-
-#close_menu{
-    display: none;
-}
-
-.showCloseMenu{
-    display: block;
-    position: absolute;
-    z-index: 2;
-    top: 2%;
-    right: 6%;
-}
-
-.showCloseMenu img{
-    width: 30px;
-    height: auto;
-    cursor: pointer;
-    transition: all 1s;
-}
-
-#menuContainer li a{
-    text-decoration: none;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    position: relative;
-    font-size: 1rem;
-}
-
-.space-humans-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.space-humans-container .info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: .5em;
-}
-
-.title-and-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-    text-align: center;
-}
-
-.title-and-text p{
-    color: #FFFFFF;
-    margin-top: 1rem;
-    line-height: 1.5;
-}
-
-.title-and-text .title{
-    color: #FFFFFF;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.astronaut-container{
-    margin-top: 1rem;
-}
-
-.astronaut-container img{
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
-.buttons-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.buttons-container .button{
-    width: 100%;
-    max-width: 200px;
-    padding: 1.2em 0px;
-    display: inline-block;
-    text-transform: uppercase;
-    border: none;
-    text-align: center;
-    font-size: .8rem;
-    margin-left: .6rem;
-    margin-right: .6rem;
-    cursor: pointer;
-}
-
-.missions{
-    background-color: #A22B91;
-}
-
-.events{
-    background-color: #0F0224;
-}
-
-.missions, .events{
-    transition: background-color .5s ease-in-out;
-}
-
-.missions:hover{
-    background-color: #801c71;
-}
-
-.events:hover{
-    background-color: #1f034b;
-}
-
-.button a{
-    text-decoration: none;
-    white-space: nowrap;
-    color: #FFFFFF;
-}
-
-#menuContainer a::after{
-    content: "";
-    position: absolute;
-    background-color: #FFFFFF;
-    height: 2px;
-    width: 0px;
-    left: 0;
-    top: 25px;
-    transition: .5s all;
-}
-
-#menuContainer a:hover::after{
-    display: inline-block;
-    width: 80%;
-    transform: translateX(10%);
-}
-
-#menuContainer li a:hover{
-    color: #d4d3d3;
-}
-
-/*.buttons-container a:first-child{
-    background-color: #A22B91;
-}
-
-.buttons-container a{
-    background-color: #0F0224;
-}
-
-.buttons-container a:first-child:hover{
-    background-color: #8d257d;
-}
-
-.buttons-container a:hover{
-    background-color: #1d0544;
-}*/
-
-.missions-container{
-    width: 100%;
-    height: 100%;
-    margin-top: 2rem;
-    padding: .5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 /*Necesitamos este contenedor de galerias, para poder usar el overflow:hidden
 y se oculten los elementos gallery que sobrepasen los 1200px del min-height*/
@@ -281,10 +35,6 @@ de renderizado y se oculte con el overflow:hidden del galeries-slider*/
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
-.gallery-active{
-
 }
 
 .gallery{
@@ -319,6 +69,7 @@ de renderizado y se oculte con el overflow:hidden del galeries-slider*/
     font-size: .7rem;
     font-weight: 200;
     margin-top: 1rem;
+    list-style: none;
 }
 
 /*Le ponemos un hidden al elemento del gallery item,
