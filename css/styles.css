@@ -4,7 +4,7 @@
 }
 
 :root{
-    --background-image: url('/images/Svg/large-background.svg');
+    --background-image: url('../images/Svg/large-background.svg');
     --background-footer: url('../images/Svg/pattern-hills.svg');
 }
 
@@ -496,11 +496,50 @@ vuelva a su tamaño original con un delay*/
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #FFFFFF;
     text-transform: uppercase;
     font-size: .65rem;
-    white-space: nowrap;
     text-align: center;
+    margin-top: 2.5em;
+}
+
+.launchs-container h2{
+    margin-top: 1em;
+}
+
+.launchs-container .starship-container{
+    display: none;
+}
+
+.launchs-container .starship-container img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.counters{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counters .counter-item{
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+.counter-item strong{
+    font-size: 3rem;
+}
+
+.counter-item p{
+    font-size: 1.7rem;
 }
 
 /*Media queries*/
