@@ -11,10 +11,10 @@ body{
     background-image: $background-image;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     font-family: 'Space Mono', monospace;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 .header-container{
