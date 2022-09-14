@@ -14,7 +14,7 @@ btnMenu.addEventListener("click", ()=>{
 });
 
 closeBtnMenu.addEventListener("click", ()=>{
-    menuContainer.style.left = "100%";
+    menuContainer.style.left = "-100%";
     btnMenu.style.display = "block";
     closeBtnMenu.setAttribute('id', 'close_menu');
     closeBtnMenu.classList.remove("showCloseMenu");
