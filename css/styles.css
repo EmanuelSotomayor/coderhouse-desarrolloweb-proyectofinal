@@ -238,7 +238,7 @@
 }
 .missions-container .galeries-slider {
   width: 100%;
-  min-height: 1200px;
+  min-height: 1250px;
   position: relative;
   margin-top: 1rem;
   overflow: hidden;
@@ -345,7 +345,6 @@
 }
 
 .events-container {
-  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -454,7 +453,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   position: relative;
   overflow: hidden;
   margin-top: 4em;
@@ -464,24 +463,43 @@
 }
 .footer-container .footer-items {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 1em;
-  gap: 10px;
+  margin-top: 4.5em;
+}
+.footer-container .planet-container {
+  display: none;
 }
 .footer-container .planet-container img {
   width: 100%;
-  max-width: 90px;
+  max-width: 5, 625em;
   height: auto;
   object-fit: cover;
 }
 .footer-container .suscribe-container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 1.5em;
+}
+.footer-container .suscribe-container #suscribe-input {
+  width: 12.5rem;
+  padding-bottom: 1.5em;
+  border: none;
+}
+.footer-container .suscribe-container .suscribe-btn {
+  background-color: #A22B91;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
+.footer-container .suscribe-container .suscribe-btn a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
 }
 .footer-container .social-media {
   display: flex;
@@ -491,6 +509,7 @@
 }
 .footer-container .social-media img {
   width: 40px;
+  margin-left: 1em;
 }
 
 * {

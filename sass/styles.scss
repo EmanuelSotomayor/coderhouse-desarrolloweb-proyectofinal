@@ -26,7 +26,6 @@ body{
 
 /*Media queries*/
 @media screen and (min-width: 516px){
-
     .gallery-item:first-child{
         grid-row-start: 1;
         grid-row-end: 3;
