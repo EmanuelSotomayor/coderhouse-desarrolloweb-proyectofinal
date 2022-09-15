@@ -1,0 +1,42 @@
+.launchs-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $primary-text-color;
+    text-transform: uppercase;
+    font-size: .65rem;
+    text-align: center;
+    margin-top: 2.5em;
+    h2{
+        margin-top: 1em;
+    }
+    .starship-container{
+        display: none;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .counters{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .counter-item{
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 2em;
+            strong{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.7rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.missions{
+    background-color: $missions-btn-bg-color;
+    &:hover{
+        background-color: $missions-btn-bg-color-hover;
+    }
+}
+
+.events{
+    background-color: $events-btn-bg-color;
+    &:hover{
+        background-color: $events-btn-bg-color-hover;
+    }
+}
+
+.missions, .events{
+    transition: background-color .5s ease-in-out;
+}
+
+.button{
+    a{
+        text-decoration: none;
+        white-space: nowrap;
+        color: $primary-text-color;
+    }
+}

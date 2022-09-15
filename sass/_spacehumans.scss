@@ -1,0 +1,61 @@
+.space-humans-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .5em;
+    }
+}
+
+.title-and-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
+    p{
+        color: $primary-text-color;
+        margin-top: 1rem;
+        line-height: 1.5;
+    }
+    .title{
+        color: $primary-text-color;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+.astronaut-container{
+    margin-top: 1rem;
+    img{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+.buttons-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    .button{
+        width: 100%;
+        max-width: 200px;
+        padding: 1.2em 0px;
+        display: inline-block;
+        text-transform: uppercase;
+        border: none;
+        text-align: center;
+        font-size: .8rem;
+        margin-left: .6rem;
+        margin-right: .6rem;
+        cursor: pointer;
+    }
+}

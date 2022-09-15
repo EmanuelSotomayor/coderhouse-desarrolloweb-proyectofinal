@@ -1,20 +1,27 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
+.missions {
+  background-color: #A22B91;
+}
+.missions:hover {
+  background-color: #801c71;
 }
 
-body {
-  background-image: url("../images/Svg/large-background.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Space Mono", monospace;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  height: 100vh;
+.events {
+  background-color: #0F0224;
+}
+.events:hover {
+  background-color: #1f034b;
+}
+
+.missions, .events {
+  transition: background-color 0.5s ease-in-out;
+}
+
+.button a {
+  text-decoration: none;
+  white-space: nowrap;
+  color: #FFFFFF;
 }
 
 .header-container {
@@ -22,6 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1.3em;
+  height: 100px;
 }
 
 .image-container {
@@ -29,15 +37,13 @@ body {
   align-items: center;
   width: 60%;
 }
-
+.image-container a {
+  width: 100%;
+}
 .image-container a img {
   width: 100%;
   max-width: 250px;
   height: auto;
-}
-
-.image-container a {
-  width: 100%;
 }
 
 .navigator {
@@ -45,18 +51,16 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.navigator #menuContainer li {
-  list-style: none;
-}
-
-#menuContainer {
+.navigator #menuContainer {
   position: absolute;
   top: 0;
   left: -100%;
   transition: 1s all;
   height: 100vh;
   z-index: 100;
+}
+.navigator #menuContainer li {
+  list-style: none;
 }
 
 .showMenu {
@@ -72,7 +76,6 @@ body {
   align-items: center;
   border-bottom-right-radius: 100px;
 }
-
 .showMenu li {
   width: 100%;
   position: relative;
@@ -80,7 +83,6 @@ body {
   padding: 2rem;
   transition: 1s all ease-out;
 }
-
 .showMenu li:hover {
   background-color: #79206b;
 }
@@ -116,6 +118,24 @@ body {
   position: relative;
   font-size: 1rem;
 }
+#menuContainer li a:hover {
+  color: #d4d3d3;
+}
+#menuContainer li a::after {
+  content: "";
+  position: absolute;
+  background-color: #FFFFFF;
+  height: 2px;
+  width: 0px;
+  left: 0;
+  top: 25px;
+  transition: 0.5s all;
+}
+#menuContainer li a:hover::after {
+  display: inline-block;
+  width: 80%;
+  transform: translateX(10%);
+}
 
 .space-humans-container {
   display: flex;
@@ -123,7 +143,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .space-humans-container .info {
   display: flex;
   flex-direction: column;
@@ -139,13 +158,11 @@ body {
   width: 90%;
   text-align: center;
 }
-
 .title-and-text p {
   color: #FFFFFF;
   margin-top: 1rem;
   line-height: 1.5;
 }
-
 .title-and-text .title {
   color: #FFFFFF;
   text-transform: uppercase;
@@ -156,7 +173,6 @@ body {
 .astronaut-container {
   margin-top: 1rem;
 }
-
 .astronaut-container img {
   width: 100%;
   max-width: 300px;
@@ -169,7 +185,6 @@ body {
   justify-content: center;
   margin-top: 1rem;
 }
-
 .buttons-container .button {
   width: 100%;
   max-width: 200px;
@@ -184,120 +199,26 @@ body {
   cursor: pointer;
 }
 
-.missions {
-  background-color: #A22B91;
-}
-
-.events {
-  background-color: #0F0224;
-}
-
-.missions, .events {
-  transition: background-color 0.5s ease-in-out;
-}
-
-.missions:hover {
-  background-color: #801c71;
-}
-
-.events:hover {
-  background-color: #1f034b;
-}
-
-.button a {
-  text-decoration: none;
-  white-space: nowrap;
-  color: #FFFFFF;
-}
-
-#menuContainer a::after {
-  content: "";
-  position: absolute;
-  background-color: #FFFFFF;
-  height: 2px;
-  width: 0px;
-  left: 0;
-  top: 25px;
-  transition: 0.5s all;
-}
-
-#menuContainer a:hover::after {
-  display: inline-block;
-  width: 80%;
-  transform: translateX(10%);
-}
-
-#menuContainer li a:hover {
-  color: #d4d3d3;
-}
-
-/*.buttons-container a:first-child{
-    background-color: #A22B91;
-}
-
-.buttons-container a{
-    background-color: #0F0224;
-}
-
-.buttons-container a:first-child:hover{
-    background-color: #8d257d;
-}
-
-.buttons-container a:hover{
-    background-color: #1d0544;
-}*/
 .missions-container {
   width: 100%;
-  height: 100%;
   margin-top: 2rem;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /*Necesitamos este contenedor de galerias, para poder usar el overflow:hidden
+  y se oculten los elementos gallery que sobrepasen los 1200px del min-height*/
 }
-
-/*Necesitamos este contenedor de galerias, para poder usar el overflow:hidden
-y se oculten los elementos gallery que sobrepasen los 1200px del min-height*/
-.galeries-slider {
-  width: 100%;
-  min-height: 1200px;
-  position: relative;
-  margin-top: 1rem;
-  overflow: hidden;
-}
-
-/*Hacemos que cada elemento gallery sea absoluto, para que pierda su posición en el flujo
-de renderizado y se oculte con el overflow:hidden del galeries-slider*/
-.gallery {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.gallery {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
-  padding: 10px;
-  gap: 20px;
-  overflow: hidden;
-  transition: 1s all;
-}
-
 .missions-container .title {
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
 }
-
-.title-slider {
+.missions-container .title-slider {
   width: 100%;
 }
-
-.title-slider ul {
+.missions-container .title-slider ul {
   display: flex;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -308,11 +229,38 @@ de renderizado y se oculte con el overflow:hidden del galeries-slider*/
   font-weight: 200;
   margin-top: 1rem;
 }
-
-/*Le ponemos un hidden al elemento del gallery item,
-para que luego no se desborde la imagen y no aparezca un scroll tanto horizontal
-como verticalmente*/
-.gallery-item {
+.missions-container .title-slider .slider-navigator li {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.missions-container .title-slider .slider-navigator li:hover:nth-child(1n) {
+  color: #EF3194;
+}
+.missions-container .galeries-slider {
+  width: 100%;
+  min-height: 1200px;
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+  /*Hacemos que cada elemento gallery sea absoluto, para que pierda su posición en el flujo
+  de renderizado y se oculte con el overflow:hidden del galeries-slider*/
+}
+.missions-container .galeries-slider .gallery {
+  width: 100%;
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  padding: 10px;
+  gap: 20px;
+  overflow: hidden;
+  transition: 1s all;
+  transform: translateX(-100%);
+  /*Le ponemos un hidden al elemento del gallery item,
+  para que luego no se desborde la imagen y no aparezca un scroll tanto horizontal
+  como verticalmente*/
+}
+.missions-container .galeries-slider .gallery .gallery-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,20 +269,55 @@ como verticalmente*/
   position: relative;
   transition: 1s all;
   overflow: hidden;
+  /*Le agregamos un position relative a la imagen para que después con los
+  elementos ::before le podamos dar un absolute y no tome como elemento padre al body*/
+  /*Accedemos al hover del contenedor de la imagen
+  y al tag img, para darle las propiedades de crecimiento*/
 }
-
-/*Le agregamos un position relative a la imagen para que después con los
-elementos ::before le podamos dar un absolute y no tome como elemento padre al body*/
-.gallery-item img {
+.missions-container .galeries-slider .gallery .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: inline-block;
   position: relative;
+  /*Le agregamos una transicion a la imagen para que cuando le saquemos el hover de encima,
+  vuelva a su tamaño original con un delay*/
+  transition: transform 1s ease-out;
+}
+.missions-container .galeries-slider .gallery .gallery-item:hover {
+  /*Cuando hay un evento hover en el elemento del gallery item,
+  el elemento del card-body se va a mostrar con cierta opacidad*/
+}
+.missions-container .galeries-slider .gallery .gallery-item:hover img {
+  transform: scale(1.2);
+  transition: transform 1s ease-in-out;
+}
+.missions-container .galeries-slider .gallery .gallery-item:hover .card-body {
+  opacity: 1;
+}
+.missions-container .galeries-slider .gallery-active {
+  transform: translateX(0px);
 }
 
-/*Le damos estilos al cuerpo de la card y lo hacemos invisible*/
-.card-body {
+/*Le agregamos un background negro a la imagen, pero lo hacemos invisible*/
+.gallery-item {
+  /*Hacemos aparecer el background negro*/
+  /*Le damos estilos al cuerpo de la card y lo hacemos invisible*/
+}
+.gallery-item:hover::before {
+  opacity: 0.7;
+}
+.gallery-item::before {
+  content: "";
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  transition: 1s all ease-out;
+}
+.gallery-item .card-body {
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -350,62 +333,15 @@ elementos ::before le podamos dar un absolute y no tome como elemento padre al b
   cursor: pointer;
   padding: 0.5em;
 }
-
-.card-body h2 {
+.gallery-item .card-body h2 {
   font-size: 0.8rem;
   text-transform: uppercase;
   text-align: center;
 }
-
-.card-body p {
+.gallery-item .card-body p {
   margin-top: 0.3rem;
   text-align: center;
   font-size: 0.9rem;
-}
-
-.slider-navigator li {
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-
-.slider-navigator li:hover:nth-child(1n) {
-  color: #EF3194;
-}
-
-/*Cuando hay un evento hover en el elemento del gallery item,
-elemento del card-body se va a mostrar con cierta opacidad*/
-.gallery-item:hover .card-body {
-  opacity: 1;
-}
-
-/*Le agregamos un background negro a la imagen, pero lo hacemos invisible*/
-.gallery-item::before {
-  content: "";
-  background-color: #000000;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 100;
-  opacity: 0;
-  transition: 1s all ease-out;
-}
-
-/*Hacemos aparecer el background negro*/
-.gallery-item:hover::before {
-  opacity: 0.7;
-}
-
-/*Accedemos al hover del contenedor de la imagen
-y al tag img, para darle las propiedades de crecimiento*/
-.gallery-item:hover > img {
-  transform: scale(1.2);
-  transition: transform 1s ease-in-out;
-}
-
-/*Le agregamos una transicion a la imagen para que cuando le saquemos el hover de encima,
-vuelva a su tamaño original con un delay*/
-.gallery-item > img {
-  transition: transform 1s ease-out;
 }
 
 .events-container {
@@ -417,12 +353,10 @@ vuelva a su tamaño original con un delay*/
   padding: 1em;
   color: #FFFFFF;
 }
-
 .events-container .title {
   text-transform: uppercase;
   margin-bottom: 1em;
 }
-
 .events-container .cards {
   width: 85%;
   display: flex;
@@ -431,8 +365,7 @@ vuelva a su tamaño original con un delay*/
   flex-direction: column;
   gap: 1em;
 }
-
-.cards .cards-item {
+.events-container .cards .cards-item {
   width: 100%;
   margin-top: 0.5em;
   height: 330px;
@@ -441,39 +374,33 @@ vuelva a su tamaño original con un delay*/
   justify-content: center;
   background-color: #21054D;
 }
-
-.events-cards-body {
+.events-container .cards .cards-item .events-cards-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 80%;
 }
-
-.cards-item .date-card {
+.events-container .cards .cards-item .date-card {
   width: 29%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.date-card strong {
+.events-container .cards .cards-item .date-card strong {
   font-size: 3.5em;
 }
-
-.date-card p {
+.events-container .cards .cards-item .date-card p {
   text-transform: uppercase;
   position: relative;
   bottom: 0.8em;
 }
-
-.cards-item .event-info {
+.events-container .cards .cards-item .event-info {
   width: 80%;
   display: flex;
   flex-direction: column;
 }
-
-.event-info p {
+.events-container .cards .cards-item .event-info p {
   text-transform: uppercase;
   font-size: 1.1rem;
   margin-bottom: 0.5em;
@@ -491,41 +418,34 @@ vuelva a su tamaño original con un delay*/
   text-align: center;
   margin-top: 2.5em;
 }
-
 .launchs-container h2 {
   margin-top: 1em;
 }
-
 .launchs-container .starship-container {
   display: none;
 }
-
 .launchs-container .starship-container img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
-
-.counters {
+.launchs-container .counters {
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-.counters .counter-item {
+.launchs-container .counters .counter-item {
   width: 100%;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 2em;
 }
-
-.counter-item strong {
+.launchs-container .counters .counter-item strong {
   font-size: 3rem;
 }
-
-.counter-item p {
+.launchs-container .counters .counter-item p {
   font-size: 1.7rem;
 }
 
@@ -571,6 +491,23 @@ vuelva a su tamaño original con un delay*/
 }
 .footer-container .social-media img {
   width: 40px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("../images/Svg/large-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Space Mono", monospace;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 /*Media queries*/

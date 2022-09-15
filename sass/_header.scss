@@ -1,0 +1,120 @@
+.header-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3em;
+    height: 100px;
+}
+
+.image-container{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    a{
+        width: 100%;
+        img{
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+    }
+}
+
+.navigator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #menuContainer{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transition: 1s all;
+        height: 100vh;
+        z-index: 100;
+        li{
+            list-style: none;
+        }
+    }
+}
+
+.showMenu{
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-menu-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 100px;
+    li{
+        width: 100%;
+        position: relative;
+        bottom: 10%;
+        padding: 2rem;
+        transition: 1s all ease-out;
+        &:hover{
+            background-color: $bg-li-items-color;
+        }
+    }
+}
+
+#open_menu{
+    img{
+        width: 30px;
+        cursor: pointer;
+    }
+}
+
+#close_menu{
+    display: none;
+}
+
+.showCloseMenu{
+    display: block;
+    position: absolute;
+    z-index: 200;
+    top: 2%;
+    right: 6%;
+}
+
+.showCloseMenu{
+    img{
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+        transition: all 1s;
+    }
+}
+
+#menuContainer{
+    li{
+        a{
+            text-decoration: none;
+            color: $primary-text-color;
+            text-transform: uppercase;
+            position: relative;
+            font-size: 1rem;
+            &:hover{
+                color: $li-item-color-hover;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background-color: $li-item-color-effect;
+                height: 2px;
+                width: 0px;
+                left: 0;
+                top: 25px;
+                transition: .5s all;
+            }
+            &:hover::after{
+                display: inline-block;
+                width: 80%;
+                transform: translateX(10%);
+            }
+        }
+    }
+}
