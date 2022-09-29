@@ -8,10 +8,10 @@
 }
 
 .events {
-  background-color: #0F0224;
+  background-color: #1a0241;
 }
 .events:hover {
-  background-color: #1f034b;
+  background-color: #230457;
 }
 
 .missions, .events {
@@ -203,19 +203,26 @@
   width: 100%;
   margin-top: 2rem;
   padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /*Necesitamos este contenedor de galerias, para poder usar el overflow:hidden
-  y se oculten los elementos gallery que sobrepasen los 1200px del min-height*/
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px 50px 850px;
+  position: relative;
+  overflow: hidden;
+  /*Hacemos que cada elemento gallery sea absoluto, para que pierda su posición en el flujo
+  de renderizado y se oculte con el overflow:hidden del galeries-slider,
+  además se le cambia el position flex, por el grid, para que actúe como una
+  sub-grid.*/
 }
 .missions-container .title {
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
+  grid-row: 1/1;
+  grid-column: 1/13;
 }
 .missions-container .title-slider {
+  grid-row: 2/2;
+  grid-column: 1/13;
   width: 100%;
 }
 .missions-container .title-slider ul {
@@ -225,7 +232,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 200;
   margin-top: 1rem;
 }
@@ -236,31 +243,24 @@
 .missions-container .title-slider .slider-navigator li:hover:nth-child(1n) {
   color: #EF3194;
 }
-.missions-container .galeries-slider {
-  width: 100%;
-  min-height: 1250px;
-  position: relative;
-  margin-top: 1rem;
-  overflow: hidden;
-  /*Hacemos que cada elemento gallery sea absoluto, para que pierda su posición en el flujo
-  de renderizado y se oculte con el overflow:hidden del galeries-slider*/
-}
-.missions-container .galeries-slider .gallery {
-  width: 100%;
+.missions-container .gallery {
+  grid-row: 3/3;
+  grid-column: 1/13;
   display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 200px);
+  padding: 1em;
+  width: 100%;
   position: absolute;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-auto-rows: minmax(200px, auto);
-  padding: 10px;
-  gap: 20px;
   overflow: hidden;
   transition: 1s all;
   transform: translateX(-100%);
+  gap: 15px;
   /*Le ponemos un hidden al elemento del gallery item,
   para que luego no se desborde la imagen y no aparezca un scroll tanto horizontal
   como verticalmente*/
 }
-.missions-container .galeries-slider .gallery .gallery-item {
+.missions-container .gallery .gallery-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,28 +274,45 @@
   /*Accedemos al hover del contenedor de la imagen
   y al tag img, para darle las propiedades de crecimiento*/
 }
-.missions-container .galeries-slider .gallery .gallery-item img {
+.missions-container .gallery .gallery-item:nth-of-type(1) {
+  grid-row: 1/1;
+  grid-column: 1/13;
+}
+.missions-container .gallery .gallery-item:nth-of-type(2) {
+  grid-row: 2/2;
+  grid-column: 1/13;
+}
+.missions-container .gallery .gallery-item:nth-of-type(3) {
+  grid-row: 4/4;
+  grid-column: 1/13;
+}
+.missions-container .gallery .gallery-item:nth-of-type(4) {
+  grid-row: 3/3;
+  grid-column: 1/13;
+}
+.missions-container .gallery .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: inline-block;
   position: relative;
+  overflow: hidden;
   /*Le agregamos una transicion a la imagen para que cuando le saquemos el hover de encima,
   vuelva a su tamaño original con un delay*/
   transition: transform 1s ease-out;
 }
-.missions-container .galeries-slider .gallery .gallery-item:hover {
+.missions-container .gallery .gallery-item:hover {
   /*Cuando hay un evento hover en el elemento del gallery item,
   el elemento del card-body se va a mostrar con cierta opacidad*/
 }
-.missions-container .galeries-slider .gallery .gallery-item:hover img {
+.missions-container .gallery .gallery-item:hover img {
   transform: scale(1.2);
   transition: transform 1s ease-in-out;
 }
-.missions-container .galeries-slider .gallery .gallery-item:hover .card-body {
+.missions-container .gallery .gallery-item:hover .card-body {
   opacity: 1;
 }
-.missions-container .galeries-slider .gallery-active {
+.missions-container .gallery-active {
   transform: translateX(0px);
 }
 
@@ -357,12 +374,13 @@
   margin-bottom: 1em;
 }
 .events-container .cards {
-  width: 85%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1em;
+  max-width: 350px;
 }
 .events-container .cards .cards-item {
   width: 100%;
@@ -377,14 +395,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 90%;
 }
 .events-container .cards .cards-item .date-card {
-  width: 29%;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  left: 0.5em;
 }
 .events-container .cards .cards-item .date-card strong {
   font-size: 3.5em;
@@ -398,6 +418,8 @@
   width: 80%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  left: 0.7em;
 }
 .events-container .cards .cards-item .event-info p {
   text-transform: uppercase;
@@ -453,9 +475,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 12.5rem;
   position: relative;
-  overflow: hidden;
   margin-top: 4em;
   display: flex;
   justify-content: center;
@@ -469,7 +489,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  margin-top: 4.5em;
+  margin-top: 7em;
 }
 .footer-container .planet-container {
   display: none;
@@ -483,7 +503,7 @@
 .footer-container .suscribe-container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 .footer-container .suscribe-container #suscribe-input {
   width: 12.5rem;
@@ -505,7 +525,8 @@
   display: flex;
   flex-direction: row;
   height: auto;
-  gap: 10px;
+  gap: 0.5em;
+  margin-bottom: 1em;
 }
 .footer-container .social-media img {
   width: 40px;
@@ -530,36 +551,5 @@ body {
 }
 
 /*Media queries*/
-@media screen and (min-width: 516px) {
-  .gallery-item:first-child {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
-  .gallery-item:nth-child(2) {
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-end: 2;
-  }
-  .gallery-item:nth-child(4) {
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 2;
-  }
-  .gallery-item:nth-child(3) {
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-  .gallery {
-    height: auto;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    grid-auto-rows: minmax(100px, auto);
-  }
-}
 
 /*# sourceMappingURL=styles.css.map */
