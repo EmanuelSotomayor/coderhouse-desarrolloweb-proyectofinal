@@ -172,6 +172,10 @@
 
 .astronaut-container {
   margin-top: 1rem;
+  animation-name: movingAstronaut;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 .astronaut-container img {
   width: 100%;
@@ -183,7 +187,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .buttons-container .button {
   width: 100%;
@@ -199,6 +203,18 @@
   cursor: pointer;
 }
 
+/*Animaciones*/
+@keyframes movingAstronaut {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .missions-container {
   width: 100%;
   margin-top: 2rem;
