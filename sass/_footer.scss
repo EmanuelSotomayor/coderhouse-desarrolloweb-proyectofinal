@@ -32,9 +32,10 @@
         flex-direction: row;
         margin-bottom: 1em;
         #suscribe-input{
-            width: 12.5rem;
-            padding-bottom: 1.5em;
             border: none;
+            font-size: 1rem;
+            padding: .8rem;
+            outline: none;
         }
         .suscribe-btn{
             background-color: #A22B91;

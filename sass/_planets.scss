@@ -1,0 +1,116 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .arrow{
+        cursor: pointer;
+        width: 100%;
+        display: block;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        border: none;
+        background-color: transparent;
+        transform: translateY(-36.5625rem);
+        img{
+            width: 100%;
+            max-width: 1.30rem;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+    .planet{
+        position: absolute;
+        transform: translateX(-225%);
+        .info{
+            position: absolute;
+            transform: translateX(-100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    .active{
+        position: relative;
+        transform: translateX(0);
+        display: grid;
+        grid-template-rows: 300px 320px 300px 550px;
+        grid-template-columns: 1fr;
+        transition: 1s all ease;
+        .info-container{
+            color: $primary-text-color;
+            h2{
+                margin-bottom: .3em;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+        .info-indicators{
+            color: $primary-text-color;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .indicator-item{
+                border: 1px solid $primary-text-color;
+                padding: 1.5em;
+                white-space: nowrap;
+                h2{
+                    font-size: .89rem;
+                    text-transform: uppercase;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+            .indicator-item:not(:first-child){
+                margin-top: 2rem;
+            }
+        }
+        .btns-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: .5em;
+            gap: 1em;
+            .btn-planet{
+                border: .1rem solid $primary-text-color;
+                background-color: transparent;
+                padding: 1em;
+                color: $primary-text-color;
+                text-transform: uppercase;
+                font-weight: bold;
+                text-align: center;
+                line-height: 2.5;
+                cursor: pointer;
+                &:hover{
+                    background-color: $bg-menu-color;
+                    border: .1rem solid transparent;
+                }
+            }
+            .btn-planet-active{
+                background-color: $bg-menu-color;
+                border: .1rem solid transparent;
+            }
+        }
+        .planet-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 100%;
+                max-width: 230px;
+                height: auto;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        .info-active{
+            position: relative;
+            transform: translateX(0);
+            text-align: center;
+        }
+    }
+}

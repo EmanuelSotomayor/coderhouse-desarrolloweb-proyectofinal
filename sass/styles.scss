@@ -6,6 +6,8 @@
 @import "../sass/events";
 @import "../sass/launch";
 @import "../sass/footer";
+@import "../sass/planets";
+@import "../sass/contact";
 
 *{
     padding: 0;
@@ -25,9 +27,293 @@ body{
 }
 
 /*Media queries*/
-@media screen and (min-width: 576px){}
-@media screen and (min-width: 768px){}
-@media screen and (min-width: 992px){}
-@media screen and (min-width: 1024px){}
+@media screen and (min-width: 480px){
+    .missions-container{
+        .title-slider{
+            ul  {
+                font-size: .7rem;
+            }
+        }
+    }
+
+    .footer-container{
+        .footer-items{
+            margin-top: 7.5em;
+        }
+    }
+
+    .buttons-container{
+        .button{
+            font-size: .8em;
+        }
+    }
+}
+
+@media screen and (min-width: 576px){
+    .missions-container{
+        .title-slider{
+            ul  {
+                font-size: .8rem;
+            }
+        }
+    }
+
+    .footer-container{
+        .footer-items{
+            margin-top: 7.5em;
+        }
+    }
+
+    .launchs-container{
+        h2{
+            font-size: 2.3em;
+        }
+    }
+}
+@media screen and (min-width: 740px){
+    .footer-container{
+        .footer-items{
+            margin-top: 9em;
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .space-humans-container{
+        .info{
+            flex-direction: row;
+            padding: .5em;
+            .astronaut-container{
+                margin-bottom: 1em;
+                margin-left: 2em;
+                max-width: 300px;
+                img{
+                    max-width: 450px;
+                }
+            }
+            .title-and-text{
+                width: 50%;
+                max-width: 500px;
+                .title{
+                    text-align: left;
+                }
+                p{
+                    text-align: left;
+                }
+                .buttons-container{
+                    justify-content: flex-start;
+                    .missions{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .missions-container{
+        grid-template-rows: 50px 50px 520px;
+        .gallery{
+            grid-row: 3/3;
+            grid-column: 1/13;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            padding: 1em;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+            transition: 1s all;
+            transform: translateX(-100%);
+            gap: 5px;
+            /*Le ponemos un hidden al elemento del gallery item,
+            para que luego no se desborde la imagen y no aparezca un scroll tanto horizontal
+            como verticalmente*/
+            .gallery-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transition: 1s all;
+                overflow: hidden;
+                &:nth-of-type(1){
+                    grid-row: 1/3;
+                    grid-column: 1/5;
+                }
+                &:nth-of-type(2){
+                    grid-row: 1/1;
+                    grid-column: 5/9;
+                }
+                &:nth-of-type(3){
+                    grid-row: 2/2;
+                    grid-column: 5/13;
+                }
+                &:nth-of-type(4){
+                    grid-row: 1/2;
+                    grid-column: 9/13;
+                }
+                /*Le agregamos un position relative a la imagen para que después con los
+                elementos ::before le podamos dar un absolute y no tome como elemento padre al body*/
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: inline-block;
+                    position: relative;
+                    overflow: hidden;
+                    /*Le agregamos una transicion a la imagen para que cuando le saquemos el hover de encima,
+                    vuelva a su tamaño original con un delay*/
+                    transition: transform 1s ease-out;
+                }
+                /*Accedemos al hover del contenedor de la imagen
+                y al tag img, para darle las propiedades de crecimiento*/
+                &:hover{
+                    img{
+                        transform: scale(1.2);
+                        transition: transform 1s ease-in-out;
+                    }
+                    /*Cuando hay un evento hover en el elemento del gallery item,
+                    el elemento del card-body se va a mostrar con cierta opacidad*/
+                    .card-body{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .gallery-active{
+            transform: translateX(0px);
+        }
+    }
+}
+@media screen and (min-width: 950px){
+    
+    .missions-container{
+        h2{
+            font-size: 1.6em;
+        }
+    }
+
+    .events-container{
+        h2{
+            font-size: 1.6em;
+        }
+        .cards{
+            flex-direction: row;
+            max-width: 900px;
+        }
+    }
+
+    .space-humans-container{
+        .info{
+            .astronaut-container{
+                max-width: 400px;
+            }
+        }
+    }
+
+    .launchs-container{
+        .counters{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 3em;
+            padding-bottom: 1.5em;
+            overflow-y: hidden;
+            .starship-container{
+                display: block;
+                img{
+                    width: 100%;
+                    max-width: 250px;
+                }
+            }
+            .counters-items{
+                display: flex;
+                flex-direction: row;
+                width: 90%;
+            }
+            .counter-item{
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-top: 2em;
+                strong{
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+
+    .footer-container{
+        overflow-y: hidden;
+        .footer-items{
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            top: 4em;
+            margin-bottom: 5em;
+            .planet-container{
+                display: block;
+                max-width: 100px;
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 1024px){
+    
+    .header-container{
+        align-items: center;
+    }
+    
+    .showMenu{
+        display: none;
+    }
+    
+    #open_menu{
+        img{
+            display: none;
+        }
+    }
+    
+    .navigator {
+        overflow: hidden;
+        #menuContainer{
+            position: relative;
+            height: 100%;
+            left: 0;
+            display: flex;
+            li{
+                padding: 1em;
+            }
+        }
+    }
+    
+    .footer-container{
+        .footer-items{
+            margin-top: 10em;
+        }
+    }
+
+}
+
 @media screen and (min-width: 1200px){}
 @media screen and (min-width: 1400px){}
+
+/*Animaciones*/
+@keyframes moving {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

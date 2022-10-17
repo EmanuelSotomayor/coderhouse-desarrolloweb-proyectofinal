@@ -8,7 +8,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: .5em;
+        padding: 1em;
+        overflow: hidden;
     }
 }
 
@@ -35,10 +36,10 @@
     margin-top: 1rem;
     img{
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         height: auto;
     }
-    animation-name: movingAstronaut;
+    animation-name: moving;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -52,28 +53,18 @@
     .button{
         width: 100%;
         max-width: 200px;
-        padding: 1.2em 0px;
         display: inline-block;
         text-transform: uppercase;
         border: none;
         text-align: center;
-        font-size: .8rem;
+        font-size: .6rem;
         margin-left: .6rem;
         margin-right: .6rem;
         cursor: pointer;
-    }
-}
-
-/*Animaciones*/
-
-@keyframes movingAstronaut {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(20px);
-    }
-    100%{
-        transform: translateY(0);
+        a{
+            width: 100%;
+            display: inline-block;
+            padding: 1.2em 0px;
+        }
     }
 }

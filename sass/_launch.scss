@@ -19,6 +19,10 @@
             width: 100%;
             height: auto;
         }
+        animation-name: moving;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
     }
     .counters{
         width: 80%;

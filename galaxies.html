@@ -12,347 +12,379 @@
         <title>AstroApp - Galaxias</title>
     </head>
     <body>
-        <!--Header-->
-        <header class="header-container">
+         <!--Header-->
+         <header class="header-container">
+
             <figure class="image-container">
                 <a href="./index.html">
                     <img id="logo-image" src="./images/Svg/logo.svg" alt="No encontrado">
                 </a>
             </figure>
+
             <nav class="navigator">
-                <ul class="menu">
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="./planets.html">Planetas</a></li>
-                    <li><a href="./galaxies.html">Galaxias</a></li>
-                    <li><a href="./stars.html">Estrellas</a></li>
-                    <li><a href="./contact.html">Contacto</a></li>
-                </ul>
+                <div
+                    <ul id="menuContainer">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./planets.html">Planetas</a></li>
+                        <li><a href="./galaxies.html">Galaxias</a></li>
+                        <li><a href="./stars.html">Estrellas</a></li>
+                        <li><a href="./contact.html">Contacto</a></li>
+                        <div class="slideEffect"></div>
+                    </ul>
+                </div> 
+
+                <div id="open_menu">
+                    <img src="./images/Svg/hamburguer-menu.svg" alt="No encontrado">
+                </div>
+
+                <div id="close_menu">
+                    <img src="./images/Svg/close-menu.svg" alt="No encontrado">
+                </div>
+
             </nav>
+
         </header>
         <!--Section - -->
         <main class="container">
-            <img src="./images/Svg/chevron-left-solid.svg">
-                <div class="container-slider">
-                    <!--Anillo-->
-                    <div id="ring" class="galaxy">
-                        <figure class="galaxy-container">
+            
+            <button type="button" class="arrow left">
+                <img src="./images/Svg/chevron-left-solid.svg">
+            </button>
+            
+                    <!--Ring galaxy-->
+                    <div id="galaxia-anillo" class="planet active" data-element="1">
+                        <figure class="planet-container">
                             <img src="./images/Galaxies/1.ring-galaxy.png" alt="No encontrado">
                         </figure>
-                        <h2>Galaxia anillo</h2>
-                        <div id="descripcion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <div class="info-container">
+                            <h2>Galaxia anillo</h2>
+                            <div id="descripcion" class="info descp info-active" data-info="1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="superficie" class="info surf" data-info="2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="composicion" class="info comp" data-info="3">
+                                <p>MercurioLorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
                         </div>
-                        <div id="superficie">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <!--Buttons-->
+                        <div class="btns-container">
+                            <button type="button" class="btn-planet btn-planet-active" data-btn="1">01 Descripción</button>
+                            <button type="button" class="btn-planet" data-btn="2">02 Superficie</button>
+                            <button type="button" class="btn-planet" data-btn="3">03 Composición</button>
                         </div>
-                        <div id="composicion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
-                        </div>
-                    <!--Buttons-->
-                    <div class="btns-container">
-                        <button class="btn-planet">01 Descripción</button>
-                        <button class="btn-planet">02 Superficie</button>
-                        <button class="btn-planet">03 Composición</button>
+                        <!--Indicators-->
+                        <section class="info-indicators">
+                            <article class="indicator-item">
+                                <h2>Duración del año</h2>
+                                <p>365 días</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de movimiento</h2>
+                                <p>86.868km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de rotación</h2>
+                                <p>866km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Temperatura</h2>
+                                <p>15°C</p>
+                            </article>
+                        </section>
                     </div>
-                    <!--Indicators-->
-                    <section class="info-indicators">
-                        <article class="indicator-item">
-                            <h2>Duración del año</h2>
-                            <p>365 días</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de movimiento</h2>
-                            <p>86.868km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de rotación</h2>
-                            <p>866km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Temperatura</h2>
-                            <p>15°C</p>
-                        </article>
-                    </section>
-                    </div>
-                    <!--Espiral-->
-                    <div id="spiral" class="galaxy">
-                        <figure class="galaxy-container">
-                            <img src="./images/Galaxies/3.spiral-galaxy.png" alt="No encontrado">
-                        </figure>
-                        <h2>Galaxia espiral</h2>
-                        <div id="descripcion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
-                        </div>
-                        <div id="superficie">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
-                        </div>
-                        <div id="composicion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
-                        </div>
-                    <!--Buttons-->
-                    <div class="btns-container">
-                        <button class="btn-planet">01 Descripción</button>
-                        <button class="btn-planet">02 Superficie</button>
-                        <button class="btn-planet">03 Composición</button>
-                    </div>
-                    <!--Indicators-->
-                    <section class="info-indicators">
-                        <article class="indicator-item">
-                            <h2>Duración del año</h2>
-                            <p>365 días</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de movimiento</h2>
-                            <p>86.868km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de rotación</h2>
-                            <p>866km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Temperatura</h2>
-                            <p>15°C</p>
-                        </article>
-                    </section>
-                    </div>
-                    <!--Espiral barrida-->
-                    <div id="spiralbarred" class="galaxy">
-                        <figure class="galaxy-container">
+                    <!--Spiral barred galaxy-->
+                    <div id="spiral-barred" class="planet" data-element="2">
+                        <figure class="planet-container">
                             <img src="./images/Galaxies/2.spiral-barred.png" alt="No encontrado">
                         </figure>
-                        <h2>Galaxia espiral barrida</h2>
-                        <div id="descripcion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <div class="info-container">
+                            <h2>Galaxia espiral barrida</h2>
+                            <div id="descripcion" class="info descp info-active" data-info="1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="superficie" class="info surf" data-info="2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="composicion" class="info comp" data-info="3">
+                                <p>VenusLorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
                         </div>
-                        <div id="superficie">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <!--Buttons-->
+                        <div class="btns-container">
+                            <button type="button" class="btn-planet btn-planet-active" data-btn="1">01 Descripción</button>
+                            <button type="button" class="btn-planet" data-btn="2">02 Superficie</button>
+                            <button type="button" class="btn-planet" data-btn="3">03 Composición</button>
                         </div>
-                        <div id="composicion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
-                        </div>
-                    <!--Buttons-->
-                    <div class="btns-container">
-                        <button class="btn-planet">01 Descripción</button>
-                        <button class="btn-planet">02 Superficie</button>
-                        <button class="btn-planet">03 Composición</button>
+                        <!--Indicators-->
+                        <section class="info-indicators">
+                            <article class="indicator-item">
+                                <h2>Duración del año</h2>
+                                <p>365 días</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de movimiento</h2>
+                                <p>86.868km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de rotación</h2>
+                                <p>866km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Temperatura</h2>
+                                <p>15°C</p>
+                            </article>
+                        </section>
                     </div>
-                    <!--Indicators-->
-                    <section class="info-indicators">
-                        <article class="indicator-item">
-                            <h2>Duración del año</h2>
-                            <p>365 días</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de movimiento</h2>
-                            <p>86.868km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de rotación</h2>
-                            <p>866km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Temperatura</h2>
-                            <p>15°C</p>
-                        </article>
-                    </section>
+                    <!--Spiral galaxy-->
+                    <div id="spiral" class="planet" data-element="3">
+                        <figure class="planet-container">
+                            <img src="./images/Galaxies/3.spiral-galaxy.png" alt="No encontrado">
+                        </figure>
+                        <div class="info-container">
+                            <h2>Galaxia espiral</h2>
+                            <div id="descripcion" class="info descp info-active" data-info="1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="superficie" class="info surf" data-info="2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="composicion" class="info comp" data-info="3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                        </div>
+                        <!--Buttons-->
+                        <div class="btns-container">
+                            <button type="button" class="btn-planet btn-planet-active" data-btn="1">01 Descripción</button>
+                            <button type="button" class="btn-planet" data-btn="2">02 Superficie</button>
+                            <button type="button" class="btn-planet" data-btn="3">03 Composición</button>
+                        </div>
+                        <!--Indicators-->
+                        <section class="info-indicators">
+                            <article class="indicator-item">
+                                <h2>Duración del año</h2>
+                                <p>365 días</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de movimiento</h2>
+                                <p>86.868km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de rotación</h2>
+                                <p>866km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Temperatura</h2>
+                                <p>15°C</p>
+                            </article>
+                        </section>
                     </div>
-                    <!--Lenticular-->
-                    <div id="lenticular" class="galaxy">
-                        <figure class="galaxy-container">
+                    <!--Lenticular galaxy-->
+                    <div id="lenticular" class="planet" data-element="4">
+                        <figure class="planet-container">
                             <img src="./images/Galaxies/4.lenticular-galaxy.png" alt="No encontrado">
                         </figure>
-                        <h2>Galaxia lenticular</h2>
-                        <div id="descripcion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <div class="info-container">
+                            <h2>Galaxia lenticular</h2>
+                            <div id="descripcion" class="info descp info-active" data-info="1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="superficie" class="info surf" data-info="2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="composicion" class="info comp" data-info="3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
                         </div>
-                        <div id="superficie">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <!--Buttons-->
+                        <div class="btns-container">
+                            <button type="button" class="btn-planet btn-planet-active" data-btn="1">01 Descripción</button>
+                            <button type="button" class="btn-planet" data-btn="2">02 Superficie</button>
+                            <button type="button" class="btn-planet" data-btn="3">03 Composición</button>
                         </div>
-                        <div id="composicion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
-                        </div>
-                    <!--Buttons-->
-                    <div class="btns-container">
-                        <button class="btn-planet">01 Descripción</button>
-                        <button class="btn-planet">02 Superficie</button>
-                        <button class="btn-planet">03 Composición</button>
+                        <!--Indicators-->
+                        <section class="info-indicators">
+                            <article class="indicator-item">
+                                <h2>Duración del año</h2>
+                                <p>365 días</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de movimiento</h2>
+                                <p>86.868km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de rotación</h2>
+                                <p>866km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Temperatura</h2>
+                                <p>15°C</p>
+                            </article>
+                        </section>
                     </div>
-                    <!--Indicators-->
-                    <section class="info-indicators">
-                        <article class="indicator-item">
-                            <h2>Duración del año</h2>
-                            <p>365 días</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de movimiento</h2>
-                            <p>86.868km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de rotación</h2>
-                            <p>866km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Temperatura</h2>
-                            <p>15°C</p>
-                        </article>
-                    </section>
-                    </div>
-                    <!--Irregular-->
-                    <div id="irregular" class="galaxy">
-                        <figure class="galaxy-container">
+                    <!--Irregular galaxy-->
+                    <div id="irregular" class="planet" data-element="5">
+                        <figure class="planet-container">
                             <img src="./images/Galaxies/5.irregular-galaxy.png" alt="No encontrado">
                         </figure>
-                        <h2>Galaxia irregular</h2>
-                        <div id="descripcion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <div class="info-container">
+                            <h2>Galaxia irregular</h2>
+                            <div id="descripcion" class="info descp info-active" data-info="1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="superficie" class="info surf" data-info="2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="composicion" class="info comp" data-info="3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
                         </div>
-                        <div id="superficie">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <!--Buttons-->
+                        <div class="btns-container">
+                            <button type="button" class="btn-planet btn-planet-active" data-btn="1">01 Descripción</button>
+                            <button type="button" class="btn-planet" data-btn="2">02 Superficie</button>
+                            <button type="button" class="btn-planet" data-btn="3">03 Composición</button>
                         </div>
-                        <div id="composicion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
-                        </div>
-                    <!--Buttons-->
-                    <div class="btns-container">
-                        <button class="btn-planet">01 Descripción</button>
-                        <button class="btn-planet">02 Superficie</button>
-                        <button class="btn-planet">03 Composición</button>
+                        <!--Indicators-->
+                        <section class="info-indicators">
+                            <article class="indicator-item">
+                                <h2>Duración del año</h2>
+                                <p>365 días</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de movimiento</h2>
+                                <p>86.868km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de rotación</h2>
+                                <p>866km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Temperatura</h2>
+                                <p>15°C</p>
+                            </article>
+                        </section>
                     </div>
-                    <!--Indicators-->
-                    <section class="info-indicators">
-                        <article class="indicator-item">
-                            <h2>Duración del año</h2>
-                            <p>365 días</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de movimiento</h2>
-                            <p>86.868km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de rotación</h2>
-                            <p>866km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Temperatura</h2>
-                            <p>15°C</p>
-                        </article>
-                    </section>
-                    </div>
-                    <!--Eliptica-->
-                    <div id="eliptic" class="galaxy">
-                        <figure class="galaxy-container">
+                    <!--Eliptical-->
+                    <div id="eliptical" class="planet" data-element="6">
+                        <figure class="planet-container">
                             <img src="./images/Galaxies/6.eliptical-galaxy.png" alt="No encontrado">
                         </figure>
-                        <h2>Galaxia eliptica</h2>
-                        <div id="descripcion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <div class="info-container">
+                            <h2>Galaxia eliptica</h2>
+                            <div id="descripcion" class="info descp info-active" data-info="1">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="superficie" class="info surf" data-info="2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
+                            <div id="composicion" class="info comp" data-info="3">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Nemo, soluta dignissimos doloribus aliquid nesciunt, similique, 
+                                    aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis 
+                                    provident tempore nisi earum! Recusandae, ipsa!
+                                </p>
+                            </div>
                         </div>
-                        <div id="superficie">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
+                        <!--Buttons-->
+                        <div class="btns-container">
+                            <button type="button" class="btn-planet btn-planet-active" data-btn="1">01 Descripción</button>
+                            <button type="button" class="btn-planet" data-btn="2">02 Superficie</button>
+                            <button type="button" class="btn-planet" data-btn="3">03 Composición</button>
                         </div>
-                        <div id="composicion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Nemo, soluta dignissimos doloribus aliquid nesciunt, similique,
-                                aliquam quibusdam quam molestias ad itaque aut perspiciatis officiis
-                                provident tempore nisi earum! Recusandae, ipsa!
-                            </p>
-                        </div>
-                    <!--Buttons-->
-                    <div class="btns-container"">
-                        <button class="btn-planet">01 Descripción</button>
-                        <button class="btn-planet">02 Superficie</button>
-                        <button class="btn-planet">03 Composición</button>
+                        <!--Indicators-->
+                        <section class="info-indicators">
+                            <article class="indicator-item">
+                                <h2>Duración del año</h2>
+                                <p>365 días</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de movimiento</h2>
+                                <p>86.868km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Velocidad de rotación</h2>
+                                <p>866km/h</p>
+                            </article>
+                            <article class="indicator-item">
+                                <h2>Temperatura</h2>
+                                <p>15°C</p>
+                            </article>
+                        </section>
                     </div>
-                    <!--Indicators-->
-                    <section class="info-indicators">
-                        <article class="indicator-item">
-                            <h2>Duración del año</h2>
-                            <p>365 días</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de movimiento</h2>
-                            <p>86.868km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Velocidad de rotación</h2>
-                            <p>866km/h</p>
-                        </article>
-                        <article class="indicator-item">
-                            <h2>Temperatura</h2>
-                            <p>15°C</p>
-                        </article>
-                    </section>
-                    </div>
-                </div>
-            <img src="./images/Svg/chevron-right-solid.svg">
+            <button class="arrow right" type="button">
+                <img src="./images/Svg/chevron-right-solid.svg">
+            </button>
         </main>
+        <script src="./scripts/app.js"></script>
     </body>
 </html>

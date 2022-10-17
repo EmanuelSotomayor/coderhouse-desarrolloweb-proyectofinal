@@ -1,0 +1,74 @@
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    .form-side-A{
+        display: none;
+    }
+    .form-side-B{
+        background-color: $primary-text-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 600px;
+        h1{
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            position: relative;
+            margin-bottom: 1em;
+        }
+        form{
+            position: relative;
+            margin-top: 1em;
+            display: grid;
+            grid-template-rows: repeat(3, 70px) 160px 70px;
+            align-items: center;
+            .form-input{
+                width: 250px;
+                input[type="text"], input[type="email"]{
+                    width: 100%;
+                    padding: 1em;
+                    outline: none;
+                    transition: 0.3s;
+                }
+                span{
+                    position: absolute;
+                    left: 0;
+                    padding: 10px;
+                    font-size: 1rem;
+                    pointer-events: none;
+                    transition: 0.3s;
+                }
+                textarea{
+                    width: 100%;
+                    outline: none;
+                    height: 150px;
+                    transition: 0.3s;
+                }
+                input[type="submit"]{
+                    width: 100%;
+                    padding: 1em;
+                    position: relative;
+                    background-color: $events-btn-bg-color;
+                    border: none;
+                    color: $primary-text-color;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+            }
+            .form-input input:valid ~ span,
+            .form-input input:focus ~ span,
+            .form-input textarea:focus ~ span,
+            .form-input textarea:valid ~ span{
+                color: rebeccapurple;
+                transform: translateX(10px) translateY(-10px);
+                font-size: .80em;
+                padding: 0 10px;
+                background-color: #FFFFFF;
+            }
+        }
+    }
+}

@@ -54,24 +54,24 @@
                     eaque dolor hic sit modi rem ipsum sed rerum dolorum quasi 
                     laboriosam cupiditate.
                     </p>
+                    <div class="buttons-container">
+                        <button type="button" class="button missions">
+                            <a id="missions-btn" href="#missions">Misiones</a>
+                        </button>
+                        
+                        <button type="button" class="button events">
+                            <a id="events-btn" href="#events">Próximos eventos</a>
+                        </button>
+                    </div>
                 </div>
 
                 <figure class="astronaut-container">
                     <img src="./images/Svg/Astronaut.svg" alt="No encontrado">
                 </figure>
-
-                <div class="buttons-container">
-                    <button class="button missions">
-                        <a id="missions-btn" href="#misiones">Misiones</a>
-                    </button>
-                    <button class="button events">
-                        <a id="events-btn" href="#eventos">Próximos eventos</a>
-                    </button>
-                </div>
             </div>
         </section>
         <!--Section - Nuestras misiones (Contenido principal)-->
-        <main class="missions-container">
+        <main id="missions" class="missions-container">
             <h2 class="title">Nuestras misiones</h2>
             <div class="title-slider">
                 <ul class="slider-navigator">
@@ -283,7 +283,7 @@
                 </div>
         </main>
         <!--Section - Próximos eventos-->
-        <section class="events-container">
+        <section id="events" class="events-container">
             <h2 class="title">Próximos eventos</h2>
             <div class="cards">
                 <article class="cards-item">
@@ -330,21 +330,23 @@
         <!--Section - Estado de los lanzamientos-->
         <section class="launchs-container">
             <h2 class="title">Estado de lanzamientos espaciales</h2>
-            <figure class="starship-container">
-                <img id="starship-image" src="./images/Svg/starship.svg" alt="No encontrado">
-            </figure>
             <div class="counters">
-                <div class="counter-item">
-                    <strong>239</strong>
-                    <p>Éxito</p>
-                </div>
-                <div class="counter-item">
-                    <strong>83</strong>
-                    <p>Fracaso</p>
-                </div>
-                <div class="counter-item">
-                    <strong>26</strong>
-                    <p>En ruta</p>
+                <figure class="starship-container">
+                    <img id="starship-image" src="./images/Svg/starship.svg" alt="No encontrado">
+                </figure>
+                <div class="counters-items">
+                    <div class="counter-item">
+                        <strong>239</strong>
+                        <p>Éxito</p>
+                    </div>
+                    <div class="counter-item">
+                        <strong>83</strong>
+                        <p>Fracaso</p>
+                    </div>
+                    <div class="counter-item">
+                        <strong>26</strong>
+                        <p>En ruta</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -355,16 +357,22 @@
                     <img src="./images/Svg/Planeta-footer.svg" alt="No encontrado">
                 </figure>
                 <div class="suscribe-container">
-                    <input id="suscribe-input" type="text" required>
-                    <button class="suscribe-btn">
+                    <input id="suscribe-input" type="text" placeholder="Ingresa tú correo" required/>
+                    <button type="button" class="suscribe-btn">
                         <a href="#">Suscribirse</a>
                     </button>
                 </div>
                 <div class="social-media">
                     <!--Social media icons SVG-->
-                    <img class="socialIcon" src="./images/Icons/facebook.svg" alt="No encontrado">
-                    <img class="socialIcon" src="./images/Icons/instagram.svg" alt="No encontrado">
-                    <img class="socialIcon" src="./images/Icons/twitter.svg" alt="No encontrado">
+                    <a href="https://es-la.facebook.com/NASA/" target="_blank">
+                        <img class="socialIcon" src="./images/Icons/facebook.svg" alt="No encontrado">
+                    </a>
+                    <a href="https://www.instagram.com/nasa/" target="_blank">
+                        <img class="socialIcon" src="./images/Icons/instagram.svg" alt="No encontrado">
+                    </a>
+                    <a href="https://twitter.com/nasa_es" target="_blank">
+                        <img class="socialIcon" src="./images/Icons/twitter.svg" alt="No encontrado">
+                    </a>
                 </div>
             </div>
         </footer>
